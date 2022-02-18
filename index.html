@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Coding in Community Survey Form</h1>
+      <p id="description">
+        Thank you for taking the time to help us improve our community!
+      </p>
+    </header>
+
+    <main>
+      <form id="survey-form">
+        <div class="form-group">
+          <label for="name" id="name-label">Name</label>
+          <input type="text" placeholder="Enter your Name" id="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email" id="email-label">Email</label>
+          <input
+            type="email"
+            placeholder="Enter your Email"
+            id="email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="number" id="number-label">Age</label>
+          <input
+            type="number"
+            min="8"
+            max="100"
+            placeholder="Enter your Age"
+            id="number"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <p>Current role</p>
+          <select id="dropdown" required>
+            <option value="student">Student</option>
+            <option value="full-time-job">Full time job</option>
+            <option value="full-time-learner">Full time learner</option>
+            <option value="prefer-not-to-say">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>Would you recommend coding in community to a friend?</p>
+          <label>
+            <input
+              name="user-recommend"
+              type="radio"
+              value="definitely"
+              checked
+            />
+            Definitely
+          </label>
+          <label>
+            <input name="user-recommend" type="radio" value="maybe" />
+            Maybe
+          </label>
+          <label>
+            <input name="user-recommend" type="radio" value="not-sure" />
+            Not sure
+          </label>
+        </div>
+
+        <div class="form-group">
+          <p>Which platforms you think we should expand for?</p>
+          <label>
+            <input name="platforms" type="checkbox" value="telegram" checked />
+            Telegram
+          </label>
+          <label>
+            <input name="platforms" type="checkbox" value="discord" />
+            Discord
+          </label>
+          <label>
+            <input name="platforms" type="checkbox" value="signal" />
+            Signal
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label for="comments">Any comments or suggestions?</label>
+          <textarea
+            rows="5"
+            id="comments"
+            placeholder="Enter your comment or suggestion here..."
+          ></textarea>
+        </div>
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
